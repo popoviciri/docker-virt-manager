@@ -67,6 +67,7 @@ RUN \
         py3-cairo \
         py3-requests \
         py3-libvirt \
+        gtksourceview4 \
         libvirt-glib \
         libosinfo \
         dbus-x11 \
