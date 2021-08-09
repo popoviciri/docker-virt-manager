@@ -13,7 +13,7 @@ services:
 ### virt-manager
 # -------------------------------------------------------------- #
   virt-manager-dev:
-    image: ghcr.io/popoviciri/docker-virt-manager:main
+    image: popoviciri/docker-virt-manager
     container_name: virt-manager-dev
     restart: always
     ports:
