@@ -3,7 +3,7 @@
 # --------------------------------------------
 FROM alpine:3.15 AS builder
 
-ARG VM_BRANCH=master
+ARG VM_BRANCH=main
 
 RUN \
     apk add --no-cache --upgrade \
