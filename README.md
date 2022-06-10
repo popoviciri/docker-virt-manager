@@ -1,3 +1,4 @@
+[![dockerhub](https://github.com/popoviciri/docker-virt-manager/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/popoviciri/docker-virt-manager/actions/workflows/docker-publish.yml)
 # docker-virt-manager
 The image I was using dissapeared from hub.
 - recreated from: https://github.com/valentin-nasta/docker-virt-manager using the same https://github.com/jlesage/docker-baseimage-gui
