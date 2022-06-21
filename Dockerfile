@@ -41,8 +41,9 @@ RUN \
         py3-setuptools \
         py3-docutils \
         libxml2 \
-        py3-libxml2 \
-    && apk add \
+        py3-libxml2
+RUN \
+    apk add \
         openssh-askpass \
         --repository http://dl-3.alpinelinux.org/alpine/edge/testing/ \
     && rm -rf /var/cache/apk/* /tmp/* /tmp/.[!.]*
