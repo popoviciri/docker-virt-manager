@@ -6,7 +6,8 @@ FROM alpine:3.16 AS builder
 ARG VM_BRANCH=main
 
 RUN \
-    apk add --no-cache --upgrade \
+    apk update \
+    && apk add --no-cache --upgrade \
         bash \
         libressl-dev \
         xterm \
@@ -44,7 +45,7 @@ RUN \
         py3-libxml2 \
     && apk add \
         openssh-askpass \
-        --repository https://alpine.global.ssl.fastly.net/alpine/edge/testing/ \
+        --repository http://dl-3.alpinelinux.org/alpine/edge/testing/ \
     && rm -rf /var/cache/apk/* /tmp/* /tmp/.[!.]*
 
 # compile virt-manager
