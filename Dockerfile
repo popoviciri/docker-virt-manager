@@ -1,7 +1,7 @@
 # --------------------------------------------
 # Build VM
 # --------------------------------------------
-FROM alpine:3.15 AS builder
+FROM alpine:3.16 AS builder
 
 ARG VM_BRANCH=main
 
@@ -41,11 +41,10 @@ RUN \
         py3-setuptools \
         py3-docutils \
         libxml2 \
-        py3-libxml2
-RUN \
-    apk add \
+        py3-libxml2 \
+    && apk add \
         openssh-askpass \
-        --repository http://dl-3.alpinelinux.org/alpine/edge/testing/ \
+        --repository https://alpine.global.ssl.fastly.net/alpine/edge/testing/ \
     && rm -rf /var/cache/apk/* /tmp/* /tmp/.[!.]*
 
 # compile virt-manager
@@ -61,7 +60,7 @@ RUN \
 # --------------------------------------------
 # Start HERE
 # --------------------------------------------
-FROM jlesage/baseimage-gui:alpine-3.15
+FROM jlesage/baseimage-gui:alpine-3.16-v4.0.0-pre.4
 RUN \
     apk add --no-cache --upgrade \
         py3-ipaddr \
