@@ -1,7 +1,7 @@
 # --------------------------------------------
 # Build VM
 # --------------------------------------------
-FROM alpine:3.16 AS builder
+FROM alpine:3.15 AS builder
 
 ARG VM_BRANCH=main
 
@@ -61,7 +61,7 @@ RUN \
 # --------------------------------------------
 # Start HERE
 # --------------------------------------------
-FROM jlesage/baseimage-gui:alpine-3.16-v4.0.0-pre.5
+FROM jlesage/baseimage-gui:alpine-3.15
 RUN \
     apk add --no-cache --upgrade \
         py3-ipaddr \
