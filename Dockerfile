@@ -61,7 +61,7 @@ RUN \
 # --------------------------------------------
 # Start HERE
 # --------------------------------------------
-FROM jlesage/baseimage-gui:alpine-3.16
+FROM jlesage/baseimage-gui:alpine-3.16-v4
 RUN \
     apk add --no-cache --upgrade \
         py3-ipaddr \
