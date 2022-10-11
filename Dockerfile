@@ -101,6 +101,7 @@ RUN \
     && rm -rf /var/cache/apk/*
 RUN echo -e "#!/bin/sh\nexport HOME=/config\nexec /usr/local/bin/virt-manager --no-fork" \
 	> /startapp.sh
+RUN chmod +x /startapp.sh
 RUN echo -e "#!/usr/bin/with-contenv sh\ndbus-uuidgen --ensure=/etc/machine-id" \
 	> /etc/cont-init.d/20-machineid_fix.sh
 COPY --from=builder /usr/local /usr/local
