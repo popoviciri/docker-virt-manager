@@ -91,7 +91,7 @@ RUN \
     && apk add \
         ksshaskpass \
         py3-argcomplete \
-        --repository http://dl-3.alpinelinux.org/alpine/edge/testing/ \
+        --repository http://dl-3.alpinelinux.org/alpine/edge/community/ \
     && rm -rf /var/cache/apk/* /tmp/* /tmp/.[!.]* \
     && mkdir -p /usr/lib/ssh \
     && ln -s /usr/bin/ksshaskpass /usr/lib/ssh/ssh-askpass
